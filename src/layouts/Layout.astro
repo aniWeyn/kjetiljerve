@@ -21,9 +21,10 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
   :root {
-    --primary: #13151a;
-    --font: white;
+    --primary: #1b2130;
+    --font: #d4dbca;
   }
   html {
     box-sizing: border-box;
@@ -49,6 +50,9 @@ const { title } = Astro.props;
     width: 1px;
   }
   h1 {
-    font-size: 6rem;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7rem;
   }
 </style>
