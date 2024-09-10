@@ -40,4 +40,16 @@ import Links from "../components/Links.astro";
     display: flex;
     justify-content: center;
   }
+
+  @media screen and (min-width: 250px) and (max-width: 480px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
 </style>
