@@ -1,0 +1,50 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  icon: string;
+}
+
+const { href, title, icon } = Astro.props;
+---
+
+<div class="link_wrapper">
+  <a href={href} target="_blank">
+    <div class="link">
+      <span>
+        <img src={icon} alt="" height="40" width="40" />
+      </span>
+      <span>{title}</span>
+    </div>
+  </a>
+</div>
+
+<style>
+  .link {
+    padding: 20px;
+    border: 1px solid var(--font);
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+  }
+  a {
+    color: var(--font);
+
+    text-decoration: none;
+    max-width: 30px;
+  }
+
+  .link_wrapper {
+    align-self: center;
+    max-width: 300px;
+    min-width: 150px;
+  }
+
+  .link_wrapper:hover {
+    background-color: rgba(255, 255, 255, 0.143);
+  }
+
+  img {
+    color: white;
+  }
+</style>
