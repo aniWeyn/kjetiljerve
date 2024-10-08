@@ -44,15 +44,25 @@ import LinksWithIcon from "../components/LinksWithIcon.astro";
     justify-content: center;
   }
 
-  @media screen and (min-width: 250px) and (max-width: 480px) {
+  h1 {
+    white-space: nowrap;
+  }
+
+  @media screen and (min-width: 150px) and (max-width: 480px) {
     h1 {
-      font-size: 3rem;
+      font-size: 2rem;
     }
   }
 
-  @media screen and (min-width: 481px) and (max-width: 768px) {
+  @media screen and (min-width: 480px) and (max-width: 790px) {
     h1 {
       font-size: 4rem;
+    }
+  }
+
+  @media screen and (not (prefers-reduced-motion)) {
+    h1 {
+      transition: font-size 2s 500ms;
     }
   }
 </style>
