@@ -73,10 +73,41 @@ const { title } = Astro.props;
     white-space: nowrap;
     width: 1px;
   }
+
+  /* ---HEADER--- */
   h1 {
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
     font-style: normal;
     font-size: 7rem;
   }
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    white-space: nowrap;
+  }
+
+  @media screen and (min-width: 150px) and (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 790px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+  @media screen and (not (prefers-reduced-motion)) {
+    h1 {
+      transition: font-size 2s 500ms;
+    }
+  }
+
+  /* ---End of HEADER--- */
 </style>
