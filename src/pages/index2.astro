@@ -1,0 +1,132 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Links from "../components/Links.astro";
+import LinksWithIcon from "../components/LinksWithIcon.astro";
+---
+
+<Layout
+  title="Kjetil Jerve - piano and synth player, composer, arranger and producer based in Oslo, Norway"
+>
+  <!-- <img
+    src="./../../public/images/kjetilPlaysPianoMadeByHaraldOpheim13Sept2024cool.jpeg"
+  />-->
+  <div class="hero">
+    <header>
+      <h1>Kjetil Jerve</h1>
+    </header>
+    <!-- 
+    <main>
+      <Links title="Tour" href="https://bnds.us/j0gvg3" />
+      <Links
+        title="YouTube"
+        href="https://music.youtube.com/channel/UCac2EDL1Hm2G8vTwOFFB5Nw?si=gkV-yLr15G1dO8L-/"
+      />
+      <Links title="Instagram" href="https://www.instagram.com/kjetiljerve/" />
+      <Links title="Facebook" href="https://www.facebook.com/kjetiljerve/" />
+      <Links
+        title="Spotify"
+        href="https://open.spotify.com/artist/1LdI3wdD3YgxQnTTVbqR9A"
+      />
+      <Links
+        title="Apple Music"
+        href="https://music.apple.com/us/artist/kjetil-jerve/706040332"
+      />
+      <Links
+        title="Bandsintown"
+        href="https://www.bandsintown.com/a/15557200"
+      />
+      <Links title="Bandcamp" href="https://dugnadrec.bandcamp.com/" />
+      <Links title="Read more..." href="https://kjetiljerve.weebly.com" />
+      -->
+  </div>
+</Layout>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
+
+  :root {
+    --primary: #1b2130;
+    --font: #ffffff;
+  }
+
+  html {
+    background-color: #171717;
+    height: 100vh;
+    color: var(--font);
+  }
+
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  img {
+    position: fixed;
+    z-index: -100;
+    object-fit: cover;
+    width: fit-content;
+  }
+
+  .hero {
+    /* Replace 'your-image.jpg' with the path to your image */
+    background-image: url("/public/images/kjetilPlaysPianoMadeByHaraldOpheim13Sept2024cool.jpeg");
+
+    /* Ensures the image covers the container even if it needs to crop */
+    background-size: cover;
+
+    /* Centers the background image */
+    background-position: center;
+
+    /* Prevents the image from repeating if it's smaller than the container */
+    background-repeat: no-repeat;
+
+    /* Set the container height to full viewport height (you can adjust as needed) */
+    height: 100vh;
+
+    /* Optional: Add a fallback background color */
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* ---HEADER--- */
+  h1 {
+    font-family: "Walter Turncoat", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7rem;
+    color: #ffffffd4;
+  }
+
+  header {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  h1 {
+    white-space: nowrap;
+  }
+
+  @media screen and (min-width: 150px) and (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 790px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+  @media screen and (not (prefers-reduced-motion)) {
+    h1 {
+      transition: font-size 2s 500ms;
+    }
+  }
+
+  /* ---End of HEADER--- */
+</style>
