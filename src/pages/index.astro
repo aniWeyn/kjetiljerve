@@ -33,6 +33,50 @@ import LinksWithIcon from "../components/LinksWithIcon.astro";
 </Layout>
 
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+  :root {
+    --primary: #1b2130;
+    --font: #d4dbca;
+  }
+
+  /* ---HEADER--- */
+  h1 {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7rem;
+    color: var(--font);
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    white-space: nowrap;
+  }
+
+  @media screen and (min-width: 150px) and (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 790px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+  @media screen and (not (prefers-reduced-motion)) {
+    h1 {
+      transition: font-size 2s 500ms;
+    }
+  }
+
+  /* ---End of HEADER--- */
   main {
     display: flex;
     flex-direction: column;
