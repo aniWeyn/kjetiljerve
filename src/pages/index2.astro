@@ -142,8 +142,14 @@ import LinksWithIcon from "../components/LinksWithIcon.astro";
   }
 
   @media screen and (min-width: 150px) and (max-width: 480px) {
+    .hero {
+      background:
+        linear-gradient(#00000079, #00000079),
+        url("/public/images/kjetilPlaysPianoMadeByHaraldOpheim13Sept2024cool.jpeg")
+          no-repeat center/cover;
+    }
     main {
-      background-color: #00000079;
+      background-color: transparent;
     }
   }
 
