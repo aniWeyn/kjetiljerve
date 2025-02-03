@@ -32,7 +32,7 @@ import LinksWithIcon from "../components/LinksWithIcon.astro";
   </main>
 </Layout>
 
-<style>
+<style is:global>
   @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
   :root {
@@ -82,4 +82,36 @@ import LinksWithIcon from "../components/LinksWithIcon.astro";
     flex-direction: column;
     gap: 20px;
   }
+
+  /* --- LINKS --- */
+
+  main .link {
+    padding: 20px;
+    border: 1px solid var(--font);
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    border-width: thick;
+    font-weight: 900;
+    text-transform: lowercase;
+    letter-spacing: 0.7px;
+  }
+  a {
+    color: var(--font);
+
+    text-decoration: none;
+    max-width: 30px;
+  }
+
+  .link_wrapper {
+    align-self: center;
+    max-width: 300px;
+    min-width: 150px;
+  }
+
+  .link_wrapper:hover {
+    background-color: rgba(255, 255, 255, 0.143);
+  }
+
+  /* --- End of LINKS --- */
 </style>

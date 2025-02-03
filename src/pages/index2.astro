@@ -7,14 +7,10 @@ import LinksWithIcon from "../components/LinksWithIcon.astro";
 <Layout
   title="Kjetil Jerve - piano and synth player, composer, arranger and producer based in Oslo, Norway"
 >
-  <!-- <img
-    src="./../../public/images/kjetilPlaysPianoMadeByHaraldOpheim13Sept2024cool.jpeg"
-  />-->
   <div class="hero">
     <header>
       <h1>Kjetil Jerve</h1>
     </header>
-    <!-- 
     <main>
       <Links title="Tour" href="https://bnds.us/j0gvg3" />
       <Links
@@ -37,16 +33,16 @@ import LinksWithIcon from "../components/LinksWithIcon.astro";
       />
       <Links title="Bandcamp" href="https://dugnadrec.bandcamp.com/" />
       <Links title="Read more..." href="https://kjetiljerve.weebly.com" />
-      -->
+    </main>
   </div>
 </Layout>
 
-<style>
+<style is:global>
   @import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
 
   :root {
     --primary: #1b2130;
-    --font: #ffffff;
+    --font: #ffffffd4;
   }
 
   html {
@@ -60,36 +56,15 @@ import LinksWithIcon from "../components/LinksWithIcon.astro";
     margin: 0px;
   }
 
-  img {
-    position: fixed;
-    z-index: -100;
-    object-fit: cover;
-    width: fit-content;
-  }
-
   .hero {
-    /* Replace 'your-image.jpg' with the path to your image */
     background-image: url("/public/images/kjetilPlaysPianoMadeByHaraldOpheim13Sept2024cool.jpeg");
-
-    /* Ensures the image covers the container even if it needs to crop */
     background-size: cover;
-
-    /* Centers the background image */
     background-position: center;
-
-    /* Prevents the image from repeating if it's smaller than the container */
     background-repeat: no-repeat;
-
-    /* Set the container height to full viewport height (you can adjust as needed) */
     height: 100vh;
-
-    /* Optional: Add a fallback background color */
-  }
-
-  main {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    align-content: space-between;
   }
 
   /* ---HEADER--- */
@@ -98,16 +73,14 @@ import LinksWithIcon from "../components/LinksWithIcon.astro";
     font-weight: 400;
     font-style: normal;
     font-size: 7rem;
-    color: #ffffffd4;
+    color: var(--font);
+    white-space: nowrap;
+    padding-left: 45px;
   }
 
   header {
     display: flex;
     justify-content: flex-start;
-  }
-
-  h1 {
-    white-space: nowrap;
   }
 
   @media screen and (min-width: 150px) and (max-width: 480px) {
@@ -129,4 +102,44 @@ import LinksWithIcon from "../components/LinksWithIcon.astro";
   }
 
   /* ---End of HEADER--- */
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    background-color: #000000c9;
+    width: 100vw;
+    padding: 20px 4px 20px 4px;
+    font-family: "Walter Turncoat", serif;
+  }
+
+  /* --- LINKS --- */
+
+  .link {
+    padding: 20px;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    border-width: thick;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+  }
+  a {
+    color: var(--font);
+    text-decoration: none;
+    max-width: 30px;
+  }
+
+  .link_wrapper {
+    align-self: center;
+    max-width: 300px;
+    min-width: 150px;
+  }
+
+  .link_wrapper:hover {
+    background-color: rgba(255, 255, 255, 0.143);
+  }
+
+  /* --- End of LINKS --- */
 </style>
