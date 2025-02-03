@@ -7,55 +7,80 @@ import LinksWithIcon from "../components/LinksWithIcon.astro";
 <Layout
   title="Kjetil Jerve - piano and synth player, composer, arranger and producer based in Oslo, Norway"
 >
-  <header>
-    <h1>Kjetil Jerve</h1>
-  </header>
-  <main>
-    <Links title="Tour" href="https://bnds.us/j0gvg3" />
-    <Links
-      title="YouTube"
-      href="https://music.youtube.com/channel/UCac2EDL1Hm2G8vTwOFFB5Nw?si=gkV-yLr15G1dO8L-/"
-    />
-    <Links title="Instagram" href="https://www.instagram.com/kjetiljerve/" />
-    <Links title="Facebook" href="https://www.facebook.com/kjetiljerve/" />
-    <Links
-      title="Spotify"
-      href="https://open.spotify.com/artist/1LdI3wdD3YgxQnTTVbqR9A"
-    />
-    <Links
-      title="Apple Music"
-      href="https://music.apple.com/us/artist/kjetil-jerve/706040332"
-    />
-    <Links title="Bandsintown" href="https://www.bandsintown.com/a/15557200" />
-    <Links title="Bandcamp" href="https://dugnadrec.bandcamp.com/" />
-    <Links title="Read more..." href="https://kjetiljerve.weebly.com" />
-  </main>
+  <div class="hero">
+    <header>
+      <h1>Kjetil Jerve</h1>
+    </header>
+    <main>
+      <Links title="Tour" href="https://bnds.us/j0gvg3" />
+      <Links
+        title="YouTube"
+        href="https://music.youtube.com/channel/UCac2EDL1Hm2G8vTwOFFB5Nw?si=gkV-yLr15G1dO8L-/"
+      />
+      <Links title="Instagram" href="https://www.instagram.com/kjetiljerve/" />
+      <Links title="Facebook" href="https://www.facebook.com/kjetiljerve/" />
+      <Links
+        title="Spotify"
+        href="https://open.spotify.com/artist/1LdI3wdD3YgxQnTTVbqR9A"
+      />
+      <Links
+        title="Apple Music"
+        href="https://music.apple.com/us/artist/kjetil-jerve/706040332"
+      />
+      <Links
+        title="Bandsintown"
+        href="https://www.bandsintown.com/a/15557200"
+      />
+      <Links title="Bandcamp" href="https://dugnadrec.bandcamp.com/" />
+      <Links title="Read more..." href="https://kjetiljerve.weebly.com" />
+    </main>
+  </div>
 </Layout>
 
 <style is:global>
-  @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
 
   :root {
     --primary: #1b2130;
-    --font: #d4dbca;
+    --font: #ffffffd4;
+  }
+
+  html {
+    background-color: #171717;
+    height: 100vh;
+    color: var(--font);
+  }
+
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .hero {
+    background-image: url("/public/images/kjetilPlaysPianoMadeByHaraldOpheim13Sept2024cool.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
   }
 
   /* ---HEADER--- */
   h1 {
-    font-family: "Permanent Marker", cursive;
+    font-family: "Walter Turncoat", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 7rem;
     color: var(--font);
+    white-space: nowrap;
+    padding-left: 45px;
   }
 
   header {
     display: flex;
-    justify-content: center;
-  }
-
-  h1 {
-    white-space: nowrap;
+    justify-content: flex-start;
   }
 
   @media screen and (min-width: 150px) and (max-width: 480px) {
@@ -77,28 +102,31 @@ import LinksWithIcon from "../components/LinksWithIcon.astro";
   }
 
   /* ---End of HEADER--- */
+
   main {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     gap: 20px;
+    background-color: #000000c9;
+    width: 100vw;
+    padding: 20px 4px 20px 4px;
+    font-family: "Walter Turncoat", serif;
   }
 
   /* --- LINKS --- */
 
-  main .link {
+  .link {
     padding: 20px;
-    border: 1px solid var(--font);
-    max-width: 300px;
+    max-width: 200px;
     display: flex;
     justify-content: center;
     border-width: thick;
-    font-weight: 900;
-    text-transform: lowercase;
+    text-transform: uppercase;
     letter-spacing: 0.7px;
   }
   a {
     color: var(--font);
-
     text-decoration: none;
     max-width: 30px;
   }
@@ -111,6 +139,18 @@ import LinksWithIcon from "../components/LinksWithIcon.astro";
 
   .link_wrapper:hover {
     background-color: rgba(255, 255, 255, 0.143);
+  }
+
+  @media screen and (min-width: 150px) and (max-width: 480px) {
+    .hero {
+      background:
+        linear-gradient(#00000079, #00000079),
+        url("/public/images/kjetilPlaysPianoMadeByHaraldOpheim13Sept2024cool.jpeg")
+          no-repeat center/cover;
+    }
+    main {
+      background-color: transparent;
+    }
   }
 
   /* --- End of LINKS --- */
