@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Kjetil Jerve - mailing">
+  <div class="wrapper">
+    <header>
+      <h1>Kjetil Jerve</h1>
+    </header>
+    <span>whatever</span>
+    <iframe
+      src="https://bandsintown.com/artist/15557200/email_signup_form?headerTextColor=rgba(212,219,202,1)&backgroundColor=rgba(255,255,255,0)&ctaBackgroundColor=rgba(0,180,179,1)&title=TICKET LOTTERY LIST&headerTextStyle=normal&headerText=Share your email with me to win guest pass to my concert &font=Helvetica&ctaIcon=show&ctaBorderRadius=4px&ctaBorderWidth=2px&ctaBorderColor=rgba(0,180,179,1)&ctaFontColor=rgba(255,255,255,1)&alignment=center&emailInputField=show&ctaLabel=Get Notifiy&layout=wide&locale=en&appId=&affilCode="
+      width="100%"
+      height="220px"
+      title="newsletter-widget"></iframe>
+  </div>
+
+  <!--    <div>
+      <img
+        src="./../../public/images/kjetilPlaysPianoMadeByHaraldOpheim13Sept2024color.jpeg"
+      />
+    </div> -->
+</Layout>
+
+<style>
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  iframe {
+    border-style: none;
+  }
+
+  img {
+    width: 50vw;
+    padding: 20px;
+  }
+</style>
